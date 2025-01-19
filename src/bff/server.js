@@ -36,16 +36,17 @@ export const server = {
 	},
 
 	async register(regLogin, regPassword) {
-		const user = await getUser(regLogin);
+		const existedUser = await getUser(regLogin);
 
-		await addUser(regLogin, regPassword);
-
-		if (user) {
+		if (existedUser ) {
 			return {
 				error: "Такой логин уже занят",
 				res: null,
 			};
 		}
+
+		const user = await addUser(regLogin, regPassword);
+
 
 		return {
 			error: null,
