@@ -1,4 +1,4 @@
-import { Icon, Button } from "../../../../components";
+import { Icon, Button } from "../../..";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { ROLE } from "../../../../bff/constants";
@@ -14,12 +14,6 @@ const RightAligned = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-`;
-
-const StyledIcon = styled.div`
-	&:hover {
-		cursor: pointer;
-	}
 `;
 
 const UserName = styled.div`
@@ -44,25 +38,25 @@ const ControlPanelConainer = ({ className }) => {
 				) : (
 					<>
 						<UserName>{login}</UserName>
-						<StyledIcon>
 						<Icon
 							id="fa-sign-out"
 							margin="0 0 0 10px"
 							onClick={() => dispatch(logout(session))}
 						/>
-						</StyledIcon>
 					</>
 				)}
 			</RightAligned>
 			<RightAligned>
-				<StyledIcon onClick={() => navigate(-1)}>
-					<Icon id="fa-backward" margin="10px 0px 0 0" />
-				</StyledIcon>
+				<Icon
+					id="fa-backward"
+					margin="10px 0px 0 0"
+					onClick={() => navigate(-1)}
+				/>
 
 				<Link to="/post">
 					<Icon id="fa-file-text-o" margin="10px 0 0 16px" />
 				</Link>
-				<Link>
+				<Link to='/users'>
 					<Icon id="fa-users" margin="10px 0 0 16px" />
 				</Link>
 			</RightAligned>

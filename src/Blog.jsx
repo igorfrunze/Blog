@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Footer, Header } from "./components";
 import styled from "styled-components";
-import { Auth, Registration } from "./pages";
+import { Auth, Registration, Users } from "./pages";
 
 const AppColumn = styled.div`
 	display: flex;
@@ -13,7 +13,7 @@ const AppColumn = styled.div`
 	margin: 0 auto;
 `;
 
-const Content = styled.div`
+const Page = styled.div`
 	padding: 120px 0;
 `;
 
@@ -21,17 +21,17 @@ function Blog() {
 	return (
 		<AppColumn>
 			<Header />
-			<Content>
+			<Page>
 				<Routes>
 					<Route path="/" element={<div>Главная страница </div>} />
 					<Route path="/login" element={<Auth />} />
 					<Route path="/register" element={<Registration />} />
-					<Route path="/users" element={<div>Пользователи</div>} />
+					<Route path="/users" element={<Users />} />
 					<Route path="/post" element={<div>Новая статья</div>} />
 					<Route path="/post/:postId" element={<div>Статья</div>} />
 					<Route path="*" element={<div>Ошибка</div>} />
 				</Routes>
-			</Content>
+			</Page>
 			<Footer />
 		</AppColumn>
 	);
