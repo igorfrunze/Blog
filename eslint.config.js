@@ -5,6 +5,7 @@ import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import prettier from "eslint-plugin-prettier";
 
+
 export default [
 	{ ignores: ["dist"] },
 	{
@@ -27,7 +28,7 @@ export default [
 		},
 		rules: {
 			...js.configs.recommended.rules,
-			...react.configs.recommended.rules,
+			...react.configs.flat.recommended.rules,
 			...react.configs["jsx-runtime"].rules,
 			...reactHooks.configs.recommended.rules,
 			"react/jsx-no-target-blank": "off",

@@ -63,5 +63,51 @@
       "published_at": "2024-11-11"
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "id": "e918",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2038-11-04 01:56",
+      "content": "The first comment is here!"
+    },
+    {
+      "id": "ab97",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2055-11-22 20:54",
+      "content": "новый комментарий\n"
+    },
+    {
+      "id": "4bad",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2063-12-07 10:01",
+      "content": "новый комментарий 2\n"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "2395",
+      "hash": "0.80957103278021302905642642144812270998954772949219",
+      "user": {
+        "id": "001",
+        "login": "Anton",
+        "password": "qwerty123",
+        "registeredAt": "2024-12-30",
+        "roleId": 0
+      }
+    },
+    {
+      "id": "3719",
+      "hash": "0.39838909096322772107612308900570496916770935058594",
+      "user": {
+        "id": "001",
+        "login": "Anton",
+        "password": "qwerty123",
+        "registeredAt": "2024-12-30",
+        "roleId": 0
+      }
+    }
+  ]
 }

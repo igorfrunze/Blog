@@ -28,6 +28,11 @@ const ControlPanelConainer = ({ className }) => {
 	const dispatch = useDispatch();
 	const session = useSelector(selectUserSession);
 
+	const onLogout = () => {
+		dispatch(logout(session));
+		sessionStorage.removeItem("userData");
+	};
+
 	return (
 		<div className={className}>
 			<RightAligned>
@@ -41,7 +46,7 @@ const ControlPanelConainer = ({ className }) => {
 						<Icon
 							id="fa-sign-out"
 							margin="0 0 0 10px"
-							onClick={() => dispatch(logout(session))}
+							onClick={onLogout}
 						/>
 					</>
 				)}
@@ -56,7 +61,7 @@ const ControlPanelConainer = ({ className }) => {
 				<Link to="/post">
 					<Icon id="fa-file-text-o" margin="10px 0 0 16px" />
 				</Link>
-				<Link to='/users'>
+				<Link to="/users">
 					<Icon id="fa-users" margin="10px 0 0 16px" />
 				</Link>
 			</RightAligned>
