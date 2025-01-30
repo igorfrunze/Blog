@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setUser } from "./actions";
-import { Footer, Header } from "./components";
+import { Footer, Header, Modal } from "./components";
 import styled from "styled-components";
 import { Auth, Registration, Users, Post } from "./pages";
 import { useLayoutEffect } from "react";
@@ -21,23 +21,24 @@ const Page = styled.div`
 `;
 
 function Blog() {
-	const dispatch = useDispatch()
+	const dispatch = useDispatch();
 
 	useLayoutEffect(() => {
-		const currentUserDataJSON = sessionStorage.getItem('userData')
+		const currentUserDataJSON = sessionStorage.getItem("userData");
 
-		if(!currentUserDataJSON) {
-			return
+		if (!currentUserDataJSON) {
+			return;
 		}
 
-		const currentUserData = JSON.parse(currentUserDataJSON)
+		const currentUserData = JSON.parse(currentUserDataJSON);
 
-		dispatch(setUser({
-			...currentUserData,
-			roleId: Number(currentUserData.roleId)
-		}))
-
-	}, [dispatch])
+		dispatch(
+			setUser({
+				...currentUserData,
+				roleId: Number(currentUserData.roleId),
+			}),
+		);
+	}, [dispatch]);
 
 	return (
 		<AppColumn>
@@ -54,6 +55,7 @@ function Blog() {
 				</Routes>
 			</Page>
 			<Footer />
+			<Modal />
 		</AppColumn>
 	);
 }
