@@ -1,6 +1,6 @@
 export const sanitizeContent = (content) =>
 	content
-		.replacell("&nbsp", " ")
+		.replaceAll("&nbsp", " ")
 		.replace(/ +/, " ")
 		.replaceAll("<div><br></div>", "\n")
 		.replaceAll("<div>", "\n")
