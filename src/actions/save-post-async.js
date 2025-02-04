@@ -6,3 +6,4 @@ export const savePostAsync = (requestServer, newPostData) => (dispatch) =>
 
 		return updatedPost.res;
 	});
+ 

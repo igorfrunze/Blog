@@ -63,13 +63,6 @@
       "content": "I will try to write smth here to see what will go wrong if i don't insert unwanted text\n\nHere some more text"
     },
     {
-      "id": "07c4",
-      "image_url": "ssssssssssasdasdasdasdasdasdasdasd",
-      "published_at": "2054-03-21 05:21",
-      "title": "asdasdasdasdasdszxczxczxczxcvb wqwdqwdasd",
-      "content": "sofa,wd f nasdb fjhjasdgvCVSCXVWADF KJHGKJSD , kjlhdkfasdfgaskdfb akjsdhbakjsdhaskld akjshdakshd sdsdsd ;"
-    },
-    {
       "id": "de60",
       "image_url": "https://fastly.picsum.photos/id/640/280/150.jpg?hmac=aW1703ZL8ad1I4AqiwZ7mVgTTFPN3OzQLObV9kAGObc",
       "published_at": "2048-07-30 04:33",
@@ -77,7 +70,36 @@
       "content": "a new post regarding where to go on summer vacation ;"
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "id": "28b9",
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2039-03-14 01:08",
+      "content": "ddsaassdas"
+    },
+    {
+      "id": "de7d",
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2043-03-25 11:29",
+      "content": "jnasdjkhasdkjh"
+    },
+    {
+      "id": "0799",
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2044-10-14 19:15",
+      "content": "third 12223asdqasd\n"
+    },
+    {
+      "id": "1b0b",
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2052-04-27 03:25",
+      "content": "asxxxccdas"
+    }
+  ],
   "sessions": [
     {
       "id": "2395",
@@ -137,6 +159,17 @@
     {
       "id": "447e",
       "hash": "0.70830427595085998504487179161515086889266967773438",
+      "user": {
+        "id": "001",
+        "login": "Anton",
+        "password": "qwerty123",
+        "registeredAt": "2024-12-30",
+        "roleId": 0
+      }
+    },
+    {
+      "id": "386c",
+      "hash": "0.35994478013288555562354531502933241426944732666016",
       "user": {
         "id": "001",
         "login": "Anton",

@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { setUser } from "./actions";
 import { Footer, Header, Modal } from "./components";
 import styled from "styled-components";
-import { Auth, Registration, Users, Post } from "./pages";
+import { Auth, Main, Registration, Users, Post } from "./pages";
 import { useLayoutEffect } from "react";
 
 const AppColumn = styled.div`
@@ -45,7 +45,7 @@ function Blog() {
 			<Header />
 			<Page>
 				<Routes>
-					<Route path="/" element={<div>Главная страница </div>} />
+					<Route path="/" element={<Main />} />
 					<Route path="/login" element={<Auth />} />
 					<Route path="/register" element={<Registration />} />
 					<Route path="/users" element={<Users />} />
