@@ -295,6 +295,17 @@
         "registeredAt": "2024-12-30",
         "roleId": 0
       }
+    },
+    {
+      "hash": "0.94502014996313388195403604186140000820159912109375",
+      "user": {
+        "id": "001",
+        "login": "Anton",
+        "password": "qwerty123",
+        "registeredAt": "2024-12-30",
+        "roleId": 0
+      },
+      "id": "SLZ6PTK"
     }
   ]
 }
