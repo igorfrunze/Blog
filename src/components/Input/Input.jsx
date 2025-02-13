@@ -1,3 +1,6 @@
+/* eslint-disable react/display-name */
+/* eslint-disable no-unused-vars */
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { forwardRef } from "react";
 
@@ -9,7 +12,10 @@ export const Input = styled(InputContainer)`
 	width: ${({ width = "100%" }) => width};
 	height: 40px;
 	margin: 0 0 10px;
-	padding: 10px
+	padding: 10px;
 	border: 1px solid black;
 	font-size: 18px;
-`;
+`;  
+Input.propTypes = {
+	width: PropTypes.string,
+};

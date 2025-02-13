@@ -6,6 +6,7 @@ import { selectUserRole } from "../../../../selectors";
 import { useServerRequest } from "../../../../hooks";
 import styled from "styled-components";
 import { checkAccess } from "../../../../utils";
+import PropTypes from "prop-types";
 import { ROLE } from "../../../../constants";
 
 const SpecialPanelContainer = ({ className, id, publishedAt, editButton }) => {
@@ -80,3 +81,9 @@ export const SpecialPanel = styled(SpecialPanelContainer)`
 		display: flex;
 	}
 `;
+
+SpecialPanel.propTypes = {
+	id: PropTypes.string.isRequired,
+	publishedAt: PropTypes.string.isRequired,
+	editButton: PropTypes.node.isRequired,
+};

@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { Icon } from "../../../../../../components";
 import {
 	CLOSE_MODAL,
@@ -9,6 +8,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useServerRequest } from "../../../../../../hooks";
 import { ROLE } from "../../../../../../constants";
 import { selectUserRole } from "../../../../../../selectors";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
 const CommentContainer = ({
 	className,
@@ -99,3 +100,11 @@ export const Comment = styled(CommentContainer)`
 		display: flex;
 	}
 `;
+
+Comment.propTypes = {
+	postId: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired,
+	author: PropTypes.string.isRequired,
+	publishedAt: PropTypes.string.isRequired,
+	content: PropTypes.string.isRequired,
+};
